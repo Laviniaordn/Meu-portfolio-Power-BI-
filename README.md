@@ -10,29 +10,35 @@ Este repositório apresenta uma coleção de dashboards desenvolvidos durante a 
 
 ---
 
-## Dashboard 1: Petshop Gatito
+## Dashboard 1: Gatito Petshop
 
 ### 📋 Visão Geral
-Este dashboard analisa o desempenho do faturamento de um pet shop, considerando diferentes categorias como gênero dos clientes, bairro e período (ano, trimestre e mês). O painel apresenta indicadores como faturamento total, ticket médio por cliente, quantidade de vendas e média de pets por cliente. Também conta com segmentações de dados por data de compra e por marcas, além de um visual do tipo Image Grid, que permite a interação ao clicar na imagem do produto ou realizar buscas diretamente no painel.
+Este dashboard foi desenvolvido para monitorar a saúde financeira e o comportamento de vendas do **Gatito Petshop**. Ele consolida dados de faturamento e vendas, permitindo uma análise rápida através de indicadores-chave (KPIs) e visuais interativos.
+
+**Principais Insights e Funcionalidades:**
+- **KPIs de Desempenho:** Acompanhamento em tempo real do faturamento total (R$ 2,03 Mi), média de pets por cliente (3) e volume de vendas (57 mil).
+- **Análise Demográfica e Geográfica:** Distribuição do faturamento por gênero e ranking por bairro (destaque para Itaquera e Guaianases).
+- **Sazonalidade:** Evolução do faturamento por ano, trimestre e mês, identificando tendências de mercado.
+- **UX Interativa:** Utilização de *Image Grid* com ícones de produtos e barra de busca funcional para filtragem direta.
 
 ### 🖼️ Visualização
 [📄 Clique aqui para visualizar o Dashboard](GatitoPetshop/Imagens/GatitoPetshop.png)
 
 ### 🏗️ Modelo de Dados
-O modelo de dados utiliza um **Esquema Estrela** focado na eficiência das análises:
-- **Tabelas**: `Clientes`, `Produtos` e `Vendas`.
-- **Relacionamentos**: Tabelas de dimensão conectadas à tabela fato para permitir filtros dinâmicos por categoria e tempo.
+O projeto utiliza um **Esquema Estrela (Star Schema)**, garantindo máxima performance e organização:
+- **Tabela Fato (`Vendas`):** Armazena os registros de transações, faturamento e quantidades.
+- **Tabelas Dimensão (`Clientes` e `Produtos`):** Contêm os atributos necessários para os filtros e segmentações (Bairro, Gênero, Categoria, Marca).
+- **Relacionamentos:** Conexões do tipo 1:N (um para muitos) com direção de filtro única das dimensões para a fato.
 
 ![Modelo de Dados Gatito](GatitoPetshop/Imagens/ModeloDadosGatitoPetshop.png)
 
 ### 📏 Medidas DAX
-Nesta seção, apresento as principais métricas criadas para este projeto:
+Para extrair inteligência dos dados, foram criadas medidas personalizadas. Abaixo, destaco o cálculo do valor médio por produto:
 
-- **Faturamento Total**:
+**Valor Médio por Produto Vendido:**
 ```dax
-Faturamento Total = SUM(Vendas[Valor Total])
+Valor_medio_por_produto_vendido = SUM('Vendas'[Faturamento]) / SUM(Vendas[Quantidade])
 ```
-![Print Medida Faturamento](dashboard1/imagens/foto_medida_faturamento.png)
 
 ### 🛠️ Tecnologias Utilizadas
 - Power BI Desktop
