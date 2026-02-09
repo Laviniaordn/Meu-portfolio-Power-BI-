@@ -12,7 +12,7 @@ Cada dashboard está em sua própria pasta, contendo:
 ### Dashboards Incluídos:
 
 - [Dashboard 1: Petshop Gatito](#dashboard-1-vendas)
-- [Dashboard 2: E-commerce no Braisl](#dashboard-2-marketing)
+- [Dashboard 2: E-commerce no Braisl](#EcommerceNoBrasil/Imagens/EcommerceNoBrasil.pdf)
 - [Dashboard 3: Opuline](#dashboard-3-financeiro)
 
 ---
