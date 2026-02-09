@@ -4,7 +4,7 @@ Este repositório apresenta uma coleção de dashboards desenvolvidos durante a 
 
 ## 📊 Dashboards Incluídos
 
-- [Dashboard 1: Petshop Gatito](#dashboard-1-petshop-gatito)
+- [Dashboard 1: Petshop Gatito](#dashboard-1-gatito-petshop)
 - [Dashboard 2: E-commerce no Brasil](#dashboard-2-e-commerce-no-brasil)
 - [Dashboard 3: Opuline](#dashboard-3-opuline)
 
