@@ -40,7 +40,7 @@ O modelo de dados para o Dashboard de Vendas utiliza um **Esquema Estrela** com 
 
 ## Dashboard 2: E-commerce no Braisl
 
-![Dashboard de Marketing](dashboard2/images/dashboard_marketing.png)
+![Dashboard de Marketing](EcommerceNoBrasil/Imagens/ModeloDadosEcommerceNoBrasil.png)
 
 ### 📋 Visão Geral
 Este dashboard monitora o desempenho de campanhas de marketing, acompanhando métricas como custo por clique (CPC), taxa de conversão e retorno sobre investimento (ROI). O objetivo é otimizar o orçamento de marketing e melhorar a eficácia das campanhas.
