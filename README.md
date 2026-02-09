@@ -26,7 +26,7 @@ Este dashboard analisa o desempenho do faturamento de um pet shop, considerando 
 
 ### 🏗️ Modelo de Dados
 O modelo de dados para o Dashboard de Vendas utiliza um **Esquema Estrela** com as seguintes tabelas:
-- **Tabela Fato**: `Clientes` , `Produtos` e `Vendas` (contém métrica como `VAlor médio por produto vendido`).
+- **Tabela Fato**: `Clientes` , `Produtos` e `Vendas` (contém métrica como `Valor médio por produto vendido`).
 
 ![Modelo de Dados Vendas](data_models/modelo_dados_vendas.png)
 
