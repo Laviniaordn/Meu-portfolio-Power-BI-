@@ -51,10 +51,10 @@ Valor_medio_por_produto_vendido = SUM('Vendas'[Faturamento]) / SUM(Vendas[Quanti
 ## Dashboard 2: E-commerce no Brasil
 
 ### 📋 Visão Geral
-Este dashboard foi desenvolvido para analisar o desempenho do **E-commerce no Brasil** no período de **01/2017 a 08/2018**. Ele consolida informações sobre volume de pedidos, formas de pagamento e distribuição de produtos por categoria, permitindo uma análise clara e objetiva do comportamento do comércio eletrônico no país.
+Este dashboard foi desenvolvido para analisar o desempenho do **E-commerce no Brasil** em um determinado período de tempo. Ele consolida informações sobre volume de pedidos, formas de pagamento e distribuição de produtos por categoria, permitindo uma análise clara e objetiva do comportamento do comércio eletrônico no país.
 
 **Principais Insights e Funcionalidades:**
-- **KPIs de Desempenho:** Monitoramento do total de pedidos realizados no período, somando **99,28 mil pedidos**.
+- **KPIs de Desempenho:** Monitoramento do total de pedidos realizados no período.
 - **Análise Temporal:** Visualização da evolução mensal dos pedidos, evidenciando crescimento ao longo de 2017 e picos relevantes em 2018.
 - **Preferência de Pagamento:** Predominância do **cartão de crédito (74%)**, seguido por boleto (19%), voucher (6%) e cartão de débito (2%).
 - **Mix de Produtos:** Quantidade de produtos por categoria, com destaque para **Cama, Mesa e Banho**, **Beleza e Saúde** e **Informática e Acessórios**.
@@ -75,9 +75,6 @@ O projeto utiliza um **Esquema Estrela (Star Schema)**, garantindo performance e
 ![Modelo de Dados E-commerce](EcommerceNoBrasil/Imagens/ModeloDadosEcommerceNoBrasil.png)
 
 ### 📏 Medidas DAX
-Principais métricas de desempenho de marketing:
-
-### 📏 Medidas DAX
 Para análise percentual da preferência de pagamento, foi criada a seguinte medida:
 
 **Percentual por Tipo de Pagamento:**
@@ -94,8 +91,9 @@ DIVIDE(
 
 ### 🛠️ Tecnologias Utilizadas
 - Power BI Desktop
+- Power Query (M) para ETL
 - DAX
-- Conector Google Analytics
+- Fonte de dados: Arquivos Excel (.xlsx)
 
 ---
 
@@ -115,6 +113,7 @@ Este dashboard foi desenvolvido para acompanhar o desempenho comercial da **Opul
   
 ### 🖼️ Visualização
 [📄 Clique aqui para visualizar o Dashboard- Página 1](Opuline/Imagens/Opuline1.png)
+
 [📄 Clique aqui para visualizar o Dashboard- Página 2](Opuline/Imagens/Opuline2.png)
 
 ### 🏗️ Modelo de Dados
@@ -129,6 +128,7 @@ O projeto utiliza um **Esquema Estrela (Star Schema)**, garantindo flexibilidade
 - **Tabelas Auxiliares:**
   - **Parâmetro** e **Fatores**: Utilizadas para controle dinâmico de métricas e análises.
 - **Relacionamentos:** Conexões 1:N entre dimensões e a tabela fato, com propagação correta de filtros para análise multidimensional.
+  
 ![Modelo de Dados Opuline](Opuline/Imagens/ModeloDadosOpuline.png)
 
 ### 📏 Medidas DAX
@@ -140,15 +140,19 @@ SUMX(
     fPedidos,
     fPedidos[quantidade] * RELATED(dProdutosFinais[Preco])
 )
+```
+```dax
 FaturamentoMédio =
 AVERAGEX(
     fPedidos,
     fPedidos[quantidade] * RELATED(dProdutosFinais[Preco])
 )
-
+```
+```dax
 SomaMetas =
 AVERAGE(dMetaMensal[Meta])
-
+```
+```dax
 MetaMaxima =
 IF(
     [Faturamento] < [SomaMetas],
@@ -160,7 +164,8 @@ IF(
 ### 🛠️ Tecnologias Utilizadas
 - Power BI Desktop
 - DAX
-- Fonte de dados: Arquivos Excel (.xlsx)
+- Power Query (M) para ETL
+- Fonte de dados: Arquivos Excel (.xlsx),CSV
 
 ---
 
