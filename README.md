@@ -22,24 +22,23 @@ Cada dashboard está em sua própria pasta, contendo:
 ![Dashboard de Vendas](dashboard1/images/dashboard_vendas.png)
 
 ### 📋 Visão Geral
-Este dashboard analisa o desempenho de vendas, permitindo identificar tendências, produtos mais vendidos e regiões com melhor performance. O objetivo é fornecer insights para otimizar estratégias comerciais.
+Este dashboard analisa o desempenho do faturamento de um pet shop, considerando diferentes categorias como gênero dos clientes, bairro e período (ano, trimestre e mês). O painel apresenta indicadores como faturamento total, ticket médio por cliente, quantidade de vendas e média de pets por cliente. Também conta com segmentações de dados por data de compra e por marcas, além de um visual do tipo Image Grid, que permite a interação ao clicar na imagem do produto ou realizar buscas diretamente no painel.
 
 ### 🏗️ Modelo de Dados
 O modelo de dados para o Dashboard de Vendas utiliza um **Esquema Estrela** com as seguintes tabelas:
-- **Tabela Fato**: `FatoVendas` (contém métricas como `QuantidadeVendida`, `ValorTotalVendas`).
-- **Tabelas Dimensão**: `DimProduto`, `DimCliente`, `DimData`, `DimLoja` (contêm atributos para segmentação e análise).
+- **Tabela Fato**: `Clientes` , `Produtos` e `Vendas` (contém métrica como `VAlor médio por produto vendido`).
 
 ![Modelo de Dados Vendas](data_models/modelo_dados_vendas.png)
 
 ### 🛠️ Tecnologias Utilizadas
 - Power BI Desktop
 - Power Query (M) para transformação de dados
-- DAX para criação de medidas e colunas calculadas
-- Fonte de dados: SQL Server
+- DAX para criação de medida
+- Fonte de dados: Excel
 
 ---
 
-## Dashboard 2: E-commerce no Braisl]
+## Dashboard 2: E-commerce no Braisl
 
 ![Dashboard de Marketing](dashboard2/images/dashboard_marketing.png)
 
