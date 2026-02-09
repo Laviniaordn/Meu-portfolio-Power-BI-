@@ -1,82 +1,104 @@
 # Portfólio de Dashboards Power BI - Alura
 
-Este repositório apresenta uma coleção de dashboards desenvolvidos durante a formação em Power BI da Alura, demonstrando minhas habilidades em análise de dados, modelagem e visualização.
+Este repositório apresenta uma coleção de dashboards desenvolvidos durante a formação em Power BI da Alura, demonstrando minhas habilidades em análise de dados, modelagem, cálculos DAX e visualização.
 
-## 📊 Dashboards
+## 📊 Dashboards Incluídos
 
-Cada dashboard está em sua própria pasta, contendo:
-- Imagens do dashboard.
-- Uma breve descrição.
-- Explicação do modelo de dados e medidas.
-
-### Dashboards Incluídos:
-
-- [Dashboard 1: Petshop Gatito](#dashboard-1-vendas)
-- [Dashboard 2: E-commerce no Braisl](#EcommerceNoBrasil/Imagens/EcommerceNoBrasil.pdf)
-- [Dashboard 3: Opuline](#dashboard-3-financeiro)
+- [Dashboard 1: Petshop Gatito](#dashboard-1-petshop-gatito)
+- [Dashboard 2: E-commerce no Brasil](#dashboard-2-e-commerce-no-brasil)
+- [Dashboard 3: Opuline](#dashboard-3-opuline)
 
 ---
 
 ## Dashboard 1: Petshop Gatito
 
-![Dashboard de Vendas](dashboard1/images/dashboard_vendas.png)
-
 ### 📋 Visão Geral
 Este dashboard analisa o desempenho do faturamento de um pet shop, considerando diferentes categorias como gênero dos clientes, bairro e período (ano, trimestre e mês). O painel apresenta indicadores como faturamento total, ticket médio por cliente, quantidade de vendas e média de pets por cliente. Também conta com segmentações de dados por data de compra e por marcas, além de um visual do tipo Image Grid, que permite a interação ao clicar na imagem do produto ou realizar buscas diretamente no painel.
 
-### 🏗️ Modelo de Dados
-O modelo de dados para o Dashboard de Vendas utiliza um **Esquema Estrela** com as seguintes tabelas:
-- **Tabela Fato**: `Clientes` , `Produtos` e `Vendas` (contém métrica como `Valor médio por produto vendido`).
+### 🖼️ Visualização
+[📄 Clique aqui para visualizar o Dashboard (PDF)](dashboard1/imagens/dashboard_vendas.pdf)
 
-![Modelo de Dados Vendas](data_models/modelo_dados_vendas.png)
+### 🏗️ Modelo de Dados
+O modelo de dados utiliza um **Esquema Estrela** focado na eficiência das análises:
+- **Tabelas**: `Clientes`, `Produtos` e `Vendas`.
+- **Relacionamentos**: Tabelas de dimensão conectadas à tabela fato para permitir filtros dinâmicos por categoria e tempo.
+
+![Modelo de Dados Gatito](dashboard1/imagens/modelo_dados_vendas.png)
+
+### 📏 Medidas DAX
+Nesta seção, apresento as principais métricas criadas para este projeto:
+
+- **Faturamento Total**:
+```dax
+Faturamento Total = SUM(Vendas[Valor Total])
+```
+![Print Medida Faturamento](dashboard1/imagens/foto_medida_faturamento.png)
 
 ### 🛠️ Tecnologias Utilizadas
 - Power BI Desktop
-- Power Query (M) para transformação de dados
-- DAX para criação de medida
+- Power Query (M) para ETL
+- DAX para cálculos de negócio
 - Fonte de dados: Excel
 
 ---
 
-## Dashboard 2: E-commerce no Braisl
-
-![Dashboard de Marketing](EcommerceNoBrasil/Imagens/ModeloDadosEcommerceNoBrasil.png)
+## Dashboard 2: E-commerce no Brasil
 
 ### 📋 Visão Geral
-Este dashboard monitora o desempenho de campanhas de marketing, acompanhando métricas como custo por clique (CPC), taxa de conversão e retorno sobre investimento (ROI). O objetivo é otimizar o orçamento de marketing e melhorar a eficácia das campanhas.
+Este dashboard monitora o desempenho de campanhas de marketing, acompanhando métricas como custo por clique (CPC), taxa de conversão e retorno sobre investimento (ROI). O objetivo é otimizar o orçamento de marketing e melhorar a eficácia das campanhas no cenário de e-commerce brasileiro.
+
+### 🖼️ Visualização
+[📄 Clique aqui para visualizar o Dashboard (PDF)](dashboard2/imagens/dashboard_marketing.pdf)
 
 ### 🏗️ Modelo de Dados
-O modelo de dados para o Dashboard de Marketing também segue um **Esquema Estrela**:
-- **Tabela Fato**: `FatoMarketing` (contém métricas como `Cliques`, `Impressões`, `Custo`, `Conversões`).
+Utiliza um **Esquema Estrela** para performance otimizada:
+- **Tabela Fato**: `FatoMarketing` (Cliques, Impressões, Custo, Conversões).
 - **Tabelas Dimensão**: `DimCampanha`, `DimCanal`, `DimData`.
 
-![Modelo de Dados Marketing](data_models/modelo_dados_marketing.png)
+![Modelo de Dados E-commerce](dashboard2/imagens/modelo_dados_marketing.png)
+
+### 📏 Medidas DAX
+Principais métricas de desempenho de marketing:
+
+- **Custo por Clique (CPC)**:
+```dax
+CPC = DIVIDE(SUM(FatoMarketing[Custo]), SUM(FatoMarketing[Cliques]), 0)
+```
+![Print Medida CPC](dashboard2/imagens/foto_medida_cpc.png)
 
 ### 🛠️ Tecnologias Utilizadas
 - Power BI Desktop
-- Power Query (M)
 - DAX
-- Fonte de dados: Google Analytics (via conector Power BI)
+- Conector Google Analytics
 
 ---
 
 ## Dashboard 3: Opuline
 
-![Dashboard Financeiro](dashboard3/images/dashboard_financeiro.png)
-
 ### 📋 Visão Geral
-Este dashboard oferece uma visão abrangente das finanças da empresa, incluindo receitas, despesas, lucro e fluxo de caixa. Ele permite a análise da saúde financeira e o planejamento orçamentário.
+Este dashboard oferece uma visão abrangente das finanças da empresa, incluindo receitas, despesas, lucro e fluxo de caixa. Ele permite a análise da saúde financeira e o planejamento orçamentário detalhado.
+
+### 🖼️ Visualização
+[📄 Clique aqui para visualizar o Dashboard (PDF)](dashboard3/imagens/dashboard_financeiro.pdf)
 
 ### 🏗️ Modelo de Dados
-O Dashboard Financeiro utiliza um **Esquema Estrela** com as seguintes tabelas:
-- **Tabela Fato**: `FatoFinanceiro` (contém métricas como `Receita`, `Despesa`, `Lucro`).
+Estrutura robusta para análise financeira:
+- **Tabela Fato**: `FatoFinanceiro` (Receita, Despesa, Lucro).
 - **Tabelas Dimensão**: `DimContaContabil`, `DimCentroCusto`, `DimData`.
 
-![Modelo de Dados Financeiro](data_models/modelo_dados_financeiro.png)
+![Modelo de Dados Opuline](dashboard3/imagens/modelo_dados_financeiro.png)
+
+### 📏 Medidas DAX
+Cálculos financeiros fundamentais:
+
+- **Margem de Lucro**:
+```dax
+Margem de Lucro = DIVIDE([Lucro], [Receita], 0)
+```
+![Print Medida Margem](dashboard3/imagens/foto_medida_lucro.png)
 
 ### 🛠️ Tecnologias Utilizadas
 - Power BI Desktop
-- Power Query (M)
 - DAX
 - Fonte de dados: Arquivos Excel (.xlsx)
 
