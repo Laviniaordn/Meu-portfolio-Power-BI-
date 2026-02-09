@@ -16,7 +16,7 @@ Este repositório apresenta uma coleção de dashboards desenvolvidos durante a 
 Este dashboard foi desenvolvido para monitorar a saúde financeira e o comportamento de vendas do **Gatito Petshop**. Ele consolida dados de faturamento e vendas, permitindo uma análise rápida através de indicadores-chave (KPIs) e visuais interativos.
 
 **Principais Insights e Funcionalidades:**
-- **KPIs de Desempenho:** Acompanhamento em tempo real do faturamento total (R$ 2,03 Mi), média de pets por cliente (3) e volume de vendas (57 mil).
+- **KPIs de Desempenho:** Acompanhamento em tempo real do faturamento total, média de pets por cliente e volume de vendas.
 - **Análise Demográfica e Geográfica:** Distribuição do faturamento por gênero e ranking por bairro (destaque para Itaquera e Guaianases).
 - **Sazonalidade:** Evolução do faturamento por ano, trimestre e mês, identificando tendências de mercado.
 - **UX Interativa:** Utilização de *Image Grid* com ícones de produtos e barra de busca funcional para filtragem direta.
