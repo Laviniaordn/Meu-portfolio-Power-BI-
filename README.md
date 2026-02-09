@@ -16,14 +16,14 @@ Este repositório apresenta uma coleção de dashboards desenvolvidos durante a 
 Este dashboard analisa o desempenho do faturamento de um pet shop, considerando diferentes categorias como gênero dos clientes, bairro e período (ano, trimestre e mês). O painel apresenta indicadores como faturamento total, ticket médio por cliente, quantidade de vendas e média de pets por cliente. Também conta com segmentações de dados por data de compra e por marcas, além de um visual do tipo Image Grid, que permite a interação ao clicar na imagem do produto ou realizar buscas diretamente no painel.
 
 ### 🖼️ Visualização
-[📄 Clique aqui para visualizar o Dashboard (PDF)](dashboard1/imagens/dashboard_vendas.pdf)
+[📄 Clique aqui para visualizar o Dashboard](GatitoPetshop/Imagens/GatitoPetshop.png)
 
 ### 🏗️ Modelo de Dados
 O modelo de dados utiliza um **Esquema Estrela** focado na eficiência das análises:
 - **Tabelas**: `Clientes`, `Produtos` e `Vendas`.
 - **Relacionamentos**: Tabelas de dimensão conectadas à tabela fato para permitir filtros dinâmicos por categoria e tempo.
 
-![Modelo de Dados Gatito](dashboard1/imagens/modelo_dados_vendas.png)
+![Modelo de Dados Gatito](GatitoPetshop/Imagens/ModeloDadosGatitoPetshop.png)
 
 ### 📏 Medidas DAX
 Nesta seção, apresento as principais métricas criadas para este projeto:
@@ -48,14 +48,14 @@ Faturamento Total = SUM(Vendas[Valor Total])
 Este dashboard monitora o desempenho de campanhas de marketing, acompanhando métricas como custo por clique (CPC), taxa de conversão e retorno sobre investimento (ROI). O objetivo é otimizar o orçamento de marketing e melhorar a eficácia das campanhas no cenário de e-commerce brasileiro.
 
 ### 🖼️ Visualização
-[📄 Clique aqui para visualizar o Dashboard (PDF)](dashboard2/imagens/dashboard_marketing.pdf)
+[📄 Clique aqui para visualizar o Dashboard](EcommerceNoBrasil/Imagens/EcommerceNoBrasil.png)
 
 ### 🏗️ Modelo de Dados
 Utiliza um **Esquema Estrela** para performance otimizada:
 - **Tabela Fato**: `FatoMarketing` (Cliques, Impressões, Custo, Conversões).
 - **Tabelas Dimensão**: `DimCampanha`, `DimCanal`, `DimData`.
 
-![Modelo de Dados E-commerce](dashboard2/imagens/modelo_dados_marketing.png)
+![Modelo de Dados E-commerce](EcommerceNoBrasil/Imagens/ModeloDadosEcommerceNoBrasil.png)
 
 ### 📏 Medidas DAX
 Principais métricas de desempenho de marketing:
@@ -79,14 +79,15 @@ CPC = DIVIDE(SUM(FatoMarketing[Custo]), SUM(FatoMarketing[Cliques]), 0)
 Este dashboard oferece uma visão abrangente das finanças da empresa, incluindo receitas, despesas, lucro e fluxo de caixa. Ele permite a análise da saúde financeira e o planejamento orçamentário detalhado.
 
 ### 🖼️ Visualização
-[📄 Clique aqui para visualizar o Dashboard (PDF)](dashboard3/imagens/dashboard_financeiro.pdf)
+[📄 Clique aqui para visualizar o Dashboard- Página 1](Opuline/Imagens/Opuline1.png)
+[📄 Clique aqui para visualizar o Dashboard- Página 2](Opuline/Imagens/Opuline2.png)
 
 ### 🏗️ Modelo de Dados
 Estrutura robusta para análise financeira:
 - **Tabela Fato**: `FatoFinanceiro` (Receita, Despesa, Lucro).
 - **Tabelas Dimensão**: `DimContaContabil`, `DimCentroCusto`, `DimData`.
 
-![Modelo de Dados Opuline](dashboard3/imagens/modelo_dados_financeiro.png)
+![Modelo de Dados Opuline](Opuline/Imagens/ModeloDadosOpuline.png)
 
 ### 📏 Medidas DAX
 Cálculos financeiros fundamentais:
