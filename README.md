@@ -103,7 +103,7 @@ DIVIDE(
 Este dashboard foi desenvolvido para acompanhar o desempenho comercial da **Opuline**, permitindo a análise detalhada de faturamento, metas, produtos vendidos e distribuição geográfica das vendas no período de **01/01/2021 a 31/12/2024**.
 
 **Principais Insights e Funcionalidades:**
-- **KPIs de Desempenho:** Faturamento total de **R$ 714 mil**, com **2.103 itens vendidos**.
+- **KPIs de Desempenho:** Faturamento total e itens vendidos.
 - **Gestão de Metas:** Comparação entre faturamento realizado e metas definidas, com destaque visual para limites mínimo, esperado e máximo.
 - **Análise Temporal:** Evolução da receita ao longo dos anos, identificando crescimento consistente entre 2022 e 2024.
 - **Análise de Produtos:** Ranking de produtos mais vendidos e análise de quantidade por venda, segmentada por categoria (cabelos, maquiagem, perfumes e skincare).
