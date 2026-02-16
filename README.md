@@ -54,7 +54,7 @@ Valor_medio_por_produto_vendido = SUM('Vendas'[Faturamento]) / SUM(Vendas[Quanti
 Este dashboard foi desenvolvido para analisar o desempenho do **E-commerce no Brasil** em um determinado período de tempo. Ele consolida informações sobre volume de pedidos, formas de pagamento e distribuição de produtos por categoria, permitindo uma análise clara e objetiva do comportamento do comércio eletrônico no país.
 
 **Principais Insights e Funcionalidades:**
-- **KPIs de Desempenho:** Monitoramento do total de pedidos realizados no período.
+- **KPIs de Desempenho:** Monitoramento do total de pedidos realizados em um determinado período.
 - **Análise Temporal:** Visualização da evolução mensal dos pedidos, evidenciando crescimento ao longo de 2017 e picos relevantes em 2018.
 - **Preferência de Pagamento:** Predominância do cartão de crédito, seguido por boleto, voucher e cartão de débito.
 - **Mix de Produtos:** Quantidade de produtos por categoria, com destaque para **Cama, Mesa e Banho**, **Beleza e Saúde** e **Informática e Acessórios**.
