@@ -44,7 +44,7 @@ Valor_medio_por_produto_vendido = SUM('Vendas'[Faturamento]) / SUM(Vendas[Quanti
 - Power BI Desktop
 - Power Query (M) para ETL
 - DAX para cálculos de negócio
-- Fonte de dados: Excel
+- Fonte de dados: Texto(.txt), Excel(.xlsx)
 
 ---
 
@@ -165,7 +165,7 @@ IF(
 - Power BI Desktop
 - DAX
 - Power Query (M) para ETL
-- Fonte de dados: Arquivos Excel (.xlsx),CSV
+- Fonte de dados: Arquivos Excel (.xlsx)
 
 ---
 
