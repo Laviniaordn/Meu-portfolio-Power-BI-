@@ -55,7 +55,7 @@ Este dashboard foi desenvolvido para analisar o desempenho do **E-commerce no Br
 
 **Principais Insights e Funcionalidades:**
 - **KPIs de Desempenho:** Monitoramento do total de pedidos realizados em um determinado período.
-- **Análise Temporal:** Visualização da evolução mensal dos pedidos, evidenciando crescimento ao longo de 2017 e picos relevantes em 2018.
+- **Análise Temporal:** Visualização da evolução mensal dos pedidos.
 - **Preferência de Pagamento:** Predominância do cartão de crédito, seguido por boleto, voucher e cartão de débito.
 - **Mix de Produtos:** Quantidade de produtos por categoria, com destaque para **Cama, Mesa e Banho**, **Beleza e Saúde** e **Informática e Acessórios**.
 - **Interatividade:** Filtro por ano, permitindo análises dinâmicas conforme o período selecionado.
