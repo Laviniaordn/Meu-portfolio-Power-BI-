@@ -100,12 +100,12 @@ DIVIDE(
 ## Dashboard 3: Opuline
 
 ### 📋 Visão Geral
-Este dashboard foi desenvolvido para acompanhar o desempenho comercial da **Opuline**, permitindo a análise detalhada de faturamento, metas, produtos vendidos e distribuição geográfica das vendas no período de **01/01/2021 a 31/12/2024**.
+Este dashboard foi desenvolvido para acompanhar o desempenho comercial da **Opuline**, permitindo a análise detalhada de faturamento, metas, produtos vendidos e distribuição geográfica das vendas em um determinado período.
 
 **Principais Insights e Funcionalidades:**
 - **KPIs de Desempenho:** Faturamento total e itens vendidos.
 - **Gestão de Metas:** Comparação entre faturamento realizado e metas definidas, com destaque visual para limites mínimo, esperado e máximo.
-- **Análise Temporal:** Evolução da receita ao longo dos anos, identificando crescimento consistente entre 2022 e 2024.
+- **Análise Temporal:** Evolução da receita ao longo dos anos, identificando crescimento consistente.
 - **Análise de Produtos:** Ranking de produtos mais vendidos e análise de quantidade por venda, segmentada por categoria (cabelos, maquiagem, perfumes e skincare).
 - **Análise Geográfica:** Distribuição das vendas por localidade, com visualização em mapa.
 - **Origem das Vendas:** Comparação entre vendas **nacionais** e **internacionais**.
