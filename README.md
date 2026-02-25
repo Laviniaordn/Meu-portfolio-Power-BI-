@@ -100,7 +100,7 @@ DIVIDE(
 ## Dashboard 3: Opuline
 
 ### 📋 Visão Geral
-Este dashboard foi desenvolvido para acompanhar o desempenho comercial da **Opuline**, permitindo a análise detalhada de faturamento, metas, produtos vendidos e distribuição geográfica das vendas em um determinado período.
+Este dashboard foi desenvolvido para acompanhar o desempenho comercial da **Opuline**, permitindo a análise detalhada de faturamento, metas, produtos vendidos e distribuição geográfica das vendas em um determinado período de tempo.
 
 **Principais Insights e Funcionalidades:**
 - **KPIs de Desempenho:** Faturamento total e itens vendidos.
